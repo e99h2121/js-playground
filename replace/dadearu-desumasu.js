@@ -40,6 +40,44 @@ return str
 };
 
 
+function toDesumasu(str) {
+return str
+.replace(/しよう/g,'しましょう')
+.replace(/こう/g,'きましょう')
+.replace(/ろう/g,'りましょう')
+.replace(/出来た/g,'出来ました')
+.replace(/できた/g,'できました')
+.replace(/出来た/g,'出来ます')
+.replace(/できる/g,'できます')
+.replace(/ある/g,'あります')
+.replace(/なる/g,'なります')
+.replace(/くる/g,'きました')
+.replace(/ないが/g,'ませんが')
+.replace(/だろう/g,'でしょう')
+.replace(/らない/g,'りません')
+.replace(/みた/g,'みました')
+.replace(/よう/g,'ましょう')
+.replace(/だった/g,'でした')
+.replace(/だが/g,'ですが')
+.replace(/いる/g,'います')
+.replace(/かる/g,'かります')
+.replace(/えた/g,'えました')
+.replace(/いい/g,'いいです')
+.replace(/ない/g,'ないです')
+.replace(/無い/g,'無いです')
+.replace(/れる/g,'れます')
+.replace(/くる/g,'きます')
+.replace(/する/g,'します')
+.replace(/する/g,'します')
+.replace(/ない/g,'ません')
+.replace(/いた/g,'ていた')
+.replace(/た/g,'ました',true)
+.replace(/る/g,'ります',true)
+.replace(/る/g,'ます')
+.replace(/だ/g,'です');
+};
+
+
 console.log(toDadearu(str));
 console.log(toDadearu(str2));
 
