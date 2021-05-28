@@ -1,5 +1,6 @@
 const str = "朝です。ご飯を食べましょう。デザートは何にしましょうか？好きなものを選んでくださいね。";
 const str2 = "このように道筋を考えようとすると、非常に多くの可能性を検討しなければならなくなります。これをこう呼ぶことにしましょう。";
+const str3 = "朝だ。ご飯を食べるぞ。デザートは何にしようか？好きなものを選べ。";
 
 
 function toDadearu(str) {
@@ -81,4 +82,5 @@ return str
 console.log(toDadearu(str));
 console.log(toDadearu(str2));
 
+console.log(toDesumasu(str3));
 
