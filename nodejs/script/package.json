@@ -1,0 +1,12 @@
+{
+  "name": "mytest",
+  "version": "1.0.0",
+  "description": "mytest package json",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "myFirstScript": "echo done"
+  },
+  "author": "yamada_n",
+  "license": "ISC"
+}
