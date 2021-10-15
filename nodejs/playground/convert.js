@@ -19,15 +19,29 @@
     console.log(unicodeString); // こんにちは
 
 
-    var str   = "あいうえお";
-    // 文字列を配列に変換
-    var str2array = function(str) {
-        var array = [],i,il=str.length;
-        for(i=0;i<il;i++) array.push(str.charCodeAt(i));
-        return array;
-    };
-    var array = str2array( str ),
-    sjis_array = Encoding.convert(array, "UTF8", "SJIS"),
-    sjis       = Encoding.codeToString( sjis_array ); // 配列から文字列変換する関数は用意されている
-    console.log(array);
+    var str = "あいうえお";
+    const unicodeArray = [];
+    for (let i = 0; i < str.length; i++) {
+        unicodeArray.push(str.charCodeAt(i));
+    }
+    const sjisArray = Encoding.convert(unicodeArray, {
+        to: 'SJIS',
+        from: 'UNICODE',
+    });
+    const sjis = Encoding.codeToString( sjisArray ); // 配列から文字列変換する関数は用意されている
+    console.log(unicodeArray);
     console.log(sjis);
+
+
+var unicodeUnescape = function(str) {
+    var result = '', strs = str.match(/\\u.{4}/ig);
+    if (!strs) return '';
+    for (var i = 0, len = strs.length; i < len; i++) {
+        result += String.fromCharCode(strs[i].replace('\\u', '0x'));
+    }
+    return result;
+};
+
+var result = unicodeUnescape('abc123\\u3042\\u3044\\u3046\\u3048\\u304a');
+console.log(result);
+
